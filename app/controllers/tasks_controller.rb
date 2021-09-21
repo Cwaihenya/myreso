@@ -40,9 +40,7 @@ class TasksController < ApplicationController
       respond_to do |format|
         if @task.update(task_params)
           format.html { redirect_to resolution_tasks_url(@resolution), notice: "task was successfully updated." }
-          format.json { render :show, status: :ok, location: @task }
-        else
-          format.html { render :edit, status: :unprocessable_entity }
+              format.html { render :edit, status: :unprocessable_entity }
           format.json { render json: @task.errors, status: :unprocessable_entity }
         end
       end
@@ -62,6 +60,7 @@ end
       def set_task
         @task = @resolution.tasks.find(params[:id])
       end
+
 
       def get_resolution
         @resolution=Resolution.find(params[:resolution_id])
