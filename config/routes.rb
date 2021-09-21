@@ -24,6 +24,10 @@ match '/users/:id',     to: 'users#show',       via: 'get'
 match '/users',   to: 'users#index',   via: 'get'
 root to: 'resolutions#index'
 resources :users
+
+resources :conversations do
+  resources :messages
+end
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
