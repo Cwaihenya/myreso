@@ -24,7 +24,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'rexml'
-gem 'rails_admin'
+
 gem 'cancancan'
 
 gem 'rspec-rails'
