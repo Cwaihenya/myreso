@@ -24,6 +24,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'rexml'
+gem 'popper_js', '~> 2.9.3'
 
 gem 'cancancan'
 

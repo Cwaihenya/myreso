@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'users/index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users, controllers: {
-    registrations: 'users/registrations',
-        sessions: 'users/sessions'
-      }
+  devise_for :users, :path_prefix => 'd'
+  resources :users, :only =>[:show, :index]
 
   resources :resolutions do
         resources :tasks
@@ -20,6 +19,10 @@ Rails.application.routes.draw do
     root 'devise/sessions#new', as: :unauthenticated_root
   end
 end
+match '/users/:id',     to: 'users#show',       via: 'get'
+
+match '/users',   to: 'users#index',   via: 'get'
+root to: 'resolutions#index'
 resources :users
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
