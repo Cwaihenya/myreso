@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+<div class="item">
+
+  <%= link_to 'message', conversations_path(sender_id: @current_user, recipient_id: @user), method: :post %>
+</div>
+
+ <%= link_to 'Show', resolutions_path(@resolutions) %>

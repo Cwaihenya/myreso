@@ -1,0 +1,157 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require animate
+
+ *= require bootstrap/dist/css/bootstrap.min
+ *= require_tree .
+ *= require_self
+ */
+ .right
+     {
+
+       float: right;
+       display: inline;
+       color: #060606;
+       text-decoration: none;
+       margin-right: 40px;
+         font-size: 30px;
+     }
+     li
+     {
+         list-style:none;
+     }
+.left
+  {
+
+     float: left;
+     display: inline;
+     color: #060606;
+    text-decoration: none;
+      margin-right: 40px;
+     font-size: 30px;
+         }
+
+   .fixed-top
+{
+  width: 100%;
+  background-color: #6600CC;
+  height: 60px;
+  margin: 0;
+  absolute: top;
+  padding-top: 20px;
+}
+.main-header
+{
+
+    absolute: top;
+    padding-bottom: 60px;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    background-color: #740387;
+    padding-top: 20px;
+
+}
+.main-header p
+{
+
+    absolute: top;
+    padding-bottom: 60px;
+    color: #060606;
+    border-radius: 0;
+    box-shadow: none;
+    border: none
+
+}
+
+.text-primary
+{
+margin: 30px;
+
+
+}
+font-size: 40px;
+}
+.intro
+{
+  animation-delay: 1s;
+  margin: 30px;
+  font-size: 60px;
+  padding-top: 40px;
+}
+.intro1
+{
+  animation-delay: 3s;
+  color: blue;
+  font-size: 60px;
+  margin: 30px;
+
+}
+.intro2
+{
+
+  animation-delay: 5s;
+  color: blue;
+  font-size: 60px;
+  margin: 30px;
+}
+.intro3
+{
+  animation-delay: 6s;
+  color: blue;
+  font-size: 60px;
+  margin: 30px;
+
+}
+body
+{
+  background-color: #EAE6EC;
+}
+.field
+{
+  font-size: 20px;
+}
+.nav-item
+{
+  font-size: 15px;
+  color: blue;
+}
+.table
+{width: 100%;
+}
+.container-fluid
+{
+  width: 100%;
+}
+.footer
+{
+  width: 100%;
+  background-color: #740387;
+
+  margin: auto;
+  padding-bottom: 10px;
+  font-size: 80px;
+  position: absolute;
+  bottom: 0;
+
+  text-align: center;
+  padding-top: 20px;
+  padding-left: 0px;
+margin-top: 0;
+margin-right: auto;
+margin-bottom: 0;
+ margin-left: auto;
+
+}
+.footer p
+{  font-size: 30px;
+color: black;}

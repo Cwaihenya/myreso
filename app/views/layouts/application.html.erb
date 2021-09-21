@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myreso</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class="container-fluid">
+<div class='main-header'>
+ <% if user_signed_in? %>
+
+      <li class='right'> <%= link_to "Resolutions", resolutions_path %></li>
+       <li class='left'><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+     <% else %>
+         <li class='left'><%= link_to "Sign up", new_user_registration_path %></li>
+       <li class='right'> <%= link_to "Log in", new_user_session_path %></li>
+        <% end %>
+</div>
+<% if notice %>
+<div class="alert alert-success"><%= notice %></div>
+<% end %>
+<% if alert %>
+<div class="alert alert-warning"><%= alert %></div>
+<% end %>
+
+
+
+    <%= yield %>
+
+    <div class="footer">
+    <p>  Resotrack</p>
+
+</div>
+</div>
+  </body>
+</html>
