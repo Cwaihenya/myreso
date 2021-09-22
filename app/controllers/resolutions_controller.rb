@@ -22,7 +22,7 @@ before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update, 
   # POST /resolutions or /resolutions.json
   def create
     @resolution = Resolution.new(resolution_params)
-
+@resolution.user_id = current_user.id
     respond_to do |format|
       if @resolution.save
         format.html { redirect_to @resolution, notice: "Resolution was successfully created." }

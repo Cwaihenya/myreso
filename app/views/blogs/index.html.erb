@@ -1,0 +1,24 @@
+<div class="container-fluid">
+
+<h1>Tracking!!!</h1>
+
+<div class="table">
+
+
+  <tbody>
+    <% @blogs.each do |blog| %>
+
+        <h2><%= blog.title %></h2><br>
+        <h4><%= blog.content %></h4><br>
+        <td><%= link_to 'Show', blog %></td><br><br><br>
+
+        <% if current_user.id == blog.user_id %>
+
+        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td><br><br>
+<% end %>
+    <% end %>
+  </tbody>
+</div>
+</div>
+<br>

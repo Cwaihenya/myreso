@@ -36,4 +36,5 @@
 <% end %>
 <%= link_to 'Edit resolution', edit_resolution_path(@resolution) %> |
 <%= link_to 'Edit tasks', resolution_tasks_path(@resolution) %>|
+<%= link_to 'Add Blog', new_blog_path(:resolution_id => @resolution.id), :"data-no-turbolink"=>true, method:"get", class:'btn btn-indigo text-white'%> 
 <%= link_to 'Back', resolutions_path %>

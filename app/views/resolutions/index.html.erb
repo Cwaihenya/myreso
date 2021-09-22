@@ -14,6 +14,7 @@
 
   <tbody>
     <% @resolutions.each do |resolution| %>
+    <% if current_user.id == resolution.user_id %>
       <tr>
         <td class="task_row scope="row"><%= resolution.title %></td>
         <td><%= resolution.details %></td>
@@ -21,7 +22,10 @@
         <td><%= link_to 'Show', resolution %></td>
         <td><%= link_to 'Edit', edit_resolution_path(resolution) %></td>
         <td><%= link_to 'Destroy', resolution, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td>  <%= link_to 'Add Blog', new_blog_path(:resolution_id => resolution.id), :"data-no-turbolink"=>true, method:"get", class:'btn btn-indigo text-white'%></td>
+
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>
@@ -29,5 +33,5 @@
 <br>
 <li class='connect'>
 <%= link_to 'New Resolution', new_resolution_path %>
-<%= link_to 'Get in touch', users_path %></li>
+
 </div>
