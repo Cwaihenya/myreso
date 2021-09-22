@@ -44,7 +44,7 @@
    .fixed-top
 {
   width: 100%;
-  background-color: #6600CC;
+  background-color: #740387;
   height: 60px;
   margin: 0;
   absolute: top;
@@ -86,7 +86,7 @@ font-size: 40px;
 .intro
 {
   animation-delay: 1s;
-  margin: 30px;
+  margin: 20px;
   font-size: 60px;
   padding-top: 40px;
 }
@@ -95,7 +95,7 @@ font-size: 40px;
   animation-delay: 3s;
   color: blue;
   font-size: 60px;
-  margin: 30px;
+  margin: 20px;
 
 }
 .intro2
@@ -114,14 +114,11 @@ font-size: 40px;
   margin: 30px;
 
 }
-body
-{
-  background-color: #EAE6EC;
-  background: url('/public/Achievement 01.jpg')
-}
+
 .field
 {
   font-size: 20px;
+  background-color: #EAE6EC;
 }
 .connect
 {
@@ -135,6 +132,8 @@ body
 {
   width: 100%;
 }
+
+
 .footer{
  width: 100%;
  background-color: #740387;

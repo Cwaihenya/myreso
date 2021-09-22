@@ -20,15 +20,15 @@ Rails.application.routes.draw do
   authenticated :user do
     root 'blogs#index', as: :authenticated_root
   end
-
+  get '/home' => 'users#home'
   unauthenticated do
-    root 'devise/sessions#new', as: :unauthenticated_root
+    root 'home#home', as: :unauthenticated_root
   end
 end
 match '/users/:id',     to: 'users#show',       via: 'get'
 
 match '/users',   to: 'users#index',   via: 'get'
-root to: 'blogs#index'
+root to: 'homes#home'
 resources :relationships, only: [:create, :destroy]
 resources :tasks
 post '/resolution/task/:id' => 'task#completed_task', as: 'completed_task'

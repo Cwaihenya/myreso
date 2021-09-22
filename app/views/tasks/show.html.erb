@@ -15,7 +15,7 @@
   <%= @task.frequency %>
 </p>
 
-<div class="container text-center">
+<!-- <div class="container text-center">
   <h1><%= @task.task_title %></h1>
 
 
@@ -34,7 +34,7 @@
   <% else %>
     <h3>You have <%= days_until_end(@resolution) %> days left to achieve your resolution</h3>
   <% end %>
-</div>
+</div> -->
 
 
 <%= link_to 'Edit', edit_resolution_task_path(@task) %> |

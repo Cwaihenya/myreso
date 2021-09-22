@@ -3,4 +3,5 @@ class Resolution < ApplicationRecord
   accepts_nested_attributes_for :tasks, reject_if: :all_blank, allow_destroy: true
 has_many :blogs
 belongs_to :user
+validates :title, presence: true
 end

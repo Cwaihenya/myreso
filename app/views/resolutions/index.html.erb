@@ -22,7 +22,7 @@
         <td><%= link_to 'Show', resolution %></td>
         <td><%= link_to 'Edit', edit_resolution_path(resolution) %></td>
         <td><%= link_to 'Destroy', resolution, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <td>  <%= link_to 'Add Blog', new_blog_path(:resolution_id => resolution.id), :"data-no-turbolink"=>true, method:"get", class:'btn btn-indigo text-white'%></td>
+      <td>  <%= link_to 'Add Blog', new_blog_path(:resolution_id => resolution.id), :"data-no-turbolink"=>true, method:"get", class:'btn btn-indigo text-blue'%></td>
 
       </tr>
     <% end %>

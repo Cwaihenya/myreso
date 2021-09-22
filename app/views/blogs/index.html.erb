@@ -1,6 +1,12 @@
 <div class="container-fluid">
 
-<h1>Tracking!!!</h1>
+<h1>Tracking!!!</h1><br><br>
+
+<%= search_form_for @q, remote: true do |f| %>
+  <%= f.label :title_cont, 'Title' %>
+  <%= f.search_field :title_cont %>
+  <%= f.submit %>
+<% end %>
 
 <div class="table">
 
@@ -19,6 +25,6 @@
 <% end %>
     <% end %>
   </tbody>
-</div>
+</div> 
 </div>
 <br>

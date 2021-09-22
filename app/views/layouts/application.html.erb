@@ -13,7 +13,7 @@
   <div class="container-fluid">
 <div class='main-header'>
  <% if user_signed_in? %>
-   <li class='right'> <%= link_to "List of users", users_path %></li>
+
       <li class='right'> <%= link_to "Resolutions", resolutions_path %></li>
       <li class='right'> <%= link_to "Blogs", blogs_path %></li>
        <li class='left'><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
@@ -33,7 +33,7 @@
 
     <%= yield %>
 
-    <nav class="navbar navbar-light fixed-bottom p-3" style="background-color: #6600cc;">
+    <nav class="navbar navbar-light fixed-bottom p-3" style="background-color: #740387;">
   <div class="container-fluid">
     <span class="text-white" style="font-size :20px; margin: auto;">
       Resotrack

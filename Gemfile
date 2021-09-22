@@ -34,6 +34,9 @@ gem 'rspec-rails'
  gem 'faker'
  gem 'launchy'
 gem 'animate-css-rails'
+gem 'ransack', github: 'activerecord-hackery/ransack'
+
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
