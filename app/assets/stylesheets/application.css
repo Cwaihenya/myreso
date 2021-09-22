@@ -11,7 +11,7 @@
  * It is generally better to create a new file per style scope.
  *= require animate
 
- // *= require bootstrap/dist/css/bootstrap.min
+
  *= require_tree .
  *= require_self
  */
@@ -31,6 +31,7 @@
      }
 .left
   {
+
 
      float: left;
      display: inline;
