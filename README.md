@@ -33,7 +33,7 @@ https://docs.google.com/spreadsheets/d/1ZTLNtjcpO9_GQ4Q7PuBS2xyLvYBdCRMpV4SOOum4
 https://docs.google.com/document/d/1MW48mhXKlJHkBfupEz9NOQ7NHp8-2jQdu9tpktjsY50/edit?usp=sharing
 
 # Screen wire frame
-https://wireframe.cc/wqI2Mn https://wireframe.cc/bk7chj https://wireframe.cc/mMV4Ib  https://wireframe.cc/8b6PjD https://wireframe.cc/bx551A https://wireframe.cc/m6FXQ5 https://wireframe.cc/lUu0xV https://wireframe.cc/uQJQQc https://wireframe.cc/eCNMHU
+https://wireframe.cc/wqI2Mn https://wireframe.cc/bk7chj https://wireframe.cc/mMV4Ib  https://wireframe.cc/8b6PjD https://wireframe.cc/bx551A https://wireframe.cc/m6FXQ5 https://wireframe.cc/lUu0xV https://wireframe.cc/XAIump https://wireframe.cc/uQJQQc https://wireframe.cc/eCNMHU
 
 # ERD Flowchart
 https://docs.google.com/document/d/1cTXQc_u2Z0j2cL4lSROM71Hg3xeGy5a85Td7TNo2teU/edit?usp=sharing
