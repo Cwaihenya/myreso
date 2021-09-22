@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_21_065639) do
+ActiveRecord::Schema.define(version: 2021_09_22_111358) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "completion_dates", force: :cascade do |t|
+    t.integer "task_id"
+    t.date "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "conversations", force: :cascade do |t|
     t.integer "sender_id"
@@ -53,6 +60,7 @@ ActiveRecord::Schema.define(version: 2021_09_21_065639) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "resolution_id"
+    t.integer "days_completed", default: 0
     t.index ["resolution_id"], name: "index_tasks_on_resolution_id"
   end
 

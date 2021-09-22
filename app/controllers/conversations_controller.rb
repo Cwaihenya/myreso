@@ -1,7 +1,11 @@
 class ConversationsController < ApplicationController
   def index
+    @users=User.all
     @conversations = Conversation.all
   end
+  def new
+ @message = @conversation.messages.new
+end
   def create
   if Conversation.between(params[:sender_id], params[:recipient_id]).present?
     @conversation = Conversation.between(params[:sender_id], params[:recipient_id]).first

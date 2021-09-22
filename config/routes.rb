@@ -24,7 +24,8 @@ match '/users/:id',     to: 'users#show',       via: 'get'
 match '/users',   to: 'users#index',   via: 'get'
 root to: 'resolutions#index'
 resources :users
-
+resources :tasks
+post '/resolution/task/:id' => 'task#completed_task', as: 'completed_task'
 resources :conversations do
   resources :messages
 end

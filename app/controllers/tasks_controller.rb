@@ -45,7 +45,16 @@ class TasksController < ApplicationController
         end
       end
     end
-
+    def completed_task
+        @task = find_task
+        if @task.task_completed_today?(date_today)
+          flash[:message] = "You have already completed this resolution today!"
+          redirect_to resolution_task_path(@resolution.task, @resolution)
+        else
+          @task.complete_task_today
+          redirect_to resolution_task_path(@resolution.tasks, @resolution)
+        end
+      end
     # DELETE /tasks/1 or /tasks/1.json
     def destroy
       @task.destroy
@@ -61,6 +70,12 @@ end
         @task = @resolution.tasks.find(params[:id])
       end
 
+      def date_today
+          Time.now.localtime.to_date
+        end
+        def find_task
+            Task.find(params[:id])
+          end
 
       def get_resolution
         @resolution=Resolution.find(params[:resolution_id])
