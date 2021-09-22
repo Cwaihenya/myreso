@@ -28,7 +28,7 @@
 
   <% if Time.now < @resolution.end_date %>
     <h3>Did you complete your task today?</h3>
-    <%= form_tag resolution_task_path(@resolution.tasks) do %>
+    <%= form_tag task_path(@tasks) do %>
       <%= submit_tag "Task Completed Today", :class => "btn btn-info" %>
     <% end %>
   <% else %>

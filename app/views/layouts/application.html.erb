@@ -13,7 +13,7 @@
   <div class="container-fluid">
 <div class='main-header'>
  <% if user_signed_in? %>
-
+   <li class='right'> <%= link_to "List of users", users_path %></li>
       <li class='right'> <%= link_to "Resolutions", resolutions_path %></li>
        <li class='left'><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
      <% else %>

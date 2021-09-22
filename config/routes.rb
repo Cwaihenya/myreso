@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'users/index'
+  get 'relationships/create'
+  get 'relationships/destroy'
+  
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, :path_prefix => 'd'
   resources :users, :only =>[:show, :index]
@@ -23,7 +25,7 @@ match '/users/:id',     to: 'users#show',       via: 'get'
 
 match '/users',   to: 'users#index',   via: 'get'
 root to: 'resolutions#index'
-resources :users
+resources :relationships, only: [:create, :destroy]
 resources :tasks
 post '/resolution/task/:id' => 'task#completed_task', as: 'completed_task'
 resources :conversations do
