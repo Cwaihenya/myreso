@@ -3,25 +3,15 @@
 class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
 
-  # GET /resource/sign_in
-  # def new
-  #   super
-  # end
+   def guest_sign_in
+     user = User.guest
+     sign_in user
+     redirect_to jobs_path, notice: 'You have logged in as a guest user.'
+   end
 
-  # POST /resource/sign_in
-  # def create
-  #   super
-  # end
-
-  # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
-
-  # protected
-
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_in_params
-  #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
-  # end
-end
+   def admin_guest_sign_in
+     guest_user = User.admin_guest
+     sign_in guest_user
+     redirect_to jobs_path, notice: 'You have logged in as an admin guest user.'
+   end
+ end

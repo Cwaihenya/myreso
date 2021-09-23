@@ -9,6 +9,21 @@ has_many :passive_relationships, foreign_key: 'followed_id', class_name: 'Relati
 has_many :following, through: :active_relationships, source: :followed
 has_many :followers, through: :passive_relationships, source: :follower
 has_many :blogs
+def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |user|
+      user.name = 'guests'
+      user.password = SecureRandom.urlsafe_base64
+    end
+  end
+
+  def self.admin_guest
+    find_or_create_by!(email: 'admin_guest@example.com') do |user|
+      user.name = 'Guest administrator'
+      user.password = SecureRandom.urlsafe_base64
+      user.admin = 'true'
+    end
+  end 
+
 def follow!(other_user)
   active_relationships.create!(followed_id: other_user.id)
 end

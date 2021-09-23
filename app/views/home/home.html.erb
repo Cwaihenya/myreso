@@ -9,5 +9,10 @@
     <div class= "rounded mx-auto d-block">
       <%= image_tag "home/tree.jpg", :class => "img-fluid w-150"%>
   </div>
+  <% if current_user  %>
+   <button type="button" class="btn btn-primary btn-sm"><%= link_to 'Login as a user', tops_guest_sign_in_path, method: :post %></button>
+   <button type="button" class="btn btn-secondary btn-sm"><%= link_to 'Login as an admin', tops_guest_admin_sign_in_path, method: :post %></button>
+  <% end %>
+
   </div>
 </div>

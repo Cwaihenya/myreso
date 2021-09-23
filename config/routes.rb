@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   devise_scope :user do
-
+    post 'users/guest_sign_in', to: 'users/sessions#guest_sign_in'
+      post 'users/admin_guest_sign_in', to: 'users/sessions#admin_guest_sign_in'
+    end
   authenticated :user do
     root 'blogs#index', as: :authenticated_root
   end
@@ -24,14 +26,14 @@ Rails.application.routes.draw do
   unauthenticated do
     root 'home#home', as: :unauthenticated_root
   end
-end
-match '/users/:id',     to: 'users#show',       via: 'get'
 
-match '/users',   to: 'users#index',   via: 'get'
-root to: 'homes#home'
+
+
+
+root to: 'home#home'
 resources :relationships, only: [:create, :destroy]
 resources :tasks
-post '/resolution/task/:id' => 'task#completed_task', as: 'completed_task'
+
 resources :conversations do
   resources :messages
 end

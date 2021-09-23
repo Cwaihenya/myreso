@@ -34,7 +34,7 @@
   <%= task.frequency %>
 </p>
 <% end %>
-<%= link_to 'Edit resolution', edit_resolution_path(@resolution) %> |
-<%= link_to 'Edit tasks', resolution_tasks_path(@resolution) %>|
-<%= link_to 'Add Blog', new_blog_path(:resolution_id => @resolution.id), :"data-no-turbolink"=>true, method:"get", class:'btn btn-indigo text-white'%> 
-<%= link_to 'Back', resolutions_path %>
+<%= link_to 'Edit resolution', edit_resolution_path(@resolution),:"data-no-turbolink"=>true, method:"get", class:'btn btn-outline-secondary text-black' %>
+<%= link_to 'Tasks View', resolution_tasks_path(@resolution) ,:"data-no-turbolink"=>true, method:"get", class:'btn btn-outline-success text-blue'%>
+<%= link_to 'Add Blog', new_blog_path(:resolution_id => @resolution.id), :"data-no-turbolink"=>true, method:"get", class:'btn btn-outline-primary text-blue'%>
+<%= link_to 'Back', resolutions_path,  :"data-no-turbolink"=>true, method:"get", class:'btn btn-outline-info' %>
