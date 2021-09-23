@@ -1,11 +1,11 @@
 example_id                                 | status  | run_time        |
 ------------------------------------------ | ------- | --------------- |
-./spec/models/blog_spec.rb[1:1]            | pending | 0 seconds       |
+./spec/models/blog_spec.rb[1:1]            | pending | 0.00001 seconds |
 ./spec/models/comment_spec.rb[1:1]         | pending | 0 seconds       |
 ./spec/models/completion_date_spec.rb[1:1] | pending | 0.00001 seconds |
 ./spec/models/message_spec.rb[1:1]         | pending | 0.00001 seconds |
-./spec/models/task_spec.rb[1:1:1:1]        | failed  | 0.00222 seconds |
-./spec/models/task_spec.rb[1:1:2:1]        | failed  | 0.20086 seconds |
-./spec/models/task_spec.rb[1:1:2:2:1]      | failed  | 0.00099 seconds |
-./spec/models/user_spec.rb[1:1:1]          | failed  | 0.00438 seconds |
-./spec/models/user_spec.rb[1:1:2]          | failed  | 0.03279 seconds |
+./spec/models/task_spec.rb[1:1:1:1]        | failed  | 0.00178 seconds |
+./spec/models/task_spec.rb[1:1:2:1]        | failed  | 0.16197 seconds |
+./spec/models/task_spec.rb[1:1:2:2:1]      | failed  | 0.00256 seconds |
+./spec/models/user_spec.rb[1:1:1]          | failed  | 0.00508 seconds |
+./spec/models/user_spec.rb[1:1:2]          | failed  | 0.06686 seconds |

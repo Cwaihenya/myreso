@@ -131,6 +131,15 @@ font-size: 40px;
 
 }
 
+.intro6
+{
+  animation-delay: 4s;
+  color: #740387;
+  font-size: 60px;
+  margin: 30px;
+  animation-iteration-count: 5;
+
+}
 .field
 {
   font-size: 20px;

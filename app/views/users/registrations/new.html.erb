@@ -1,14 +1,14 @@
   <div class="container-fluid">
-
+  <div class='header text-right'><h3>Sign up</h3></div>
 <div class="row">
   <div class="col-sm-9 col-md-6 col-lg-8">
-    <div class=' animated intro bounceInLeft'><h1>Get it done!!!</h1></div>
-    <div class=' animated intro1 bounceInLeft'><h2 >Set your resolution</h2></div>
-    <div class=' animated intro2 bounceInLeft'><h3>Set your tasks</h3></div>
-    <div class=' animated intro3 bounceInLeft'><h4>Check in</h4></div>
+    <div class=' animated intro6 hinge'><h1>Get it done!!!</h1></div>
+    <div class=' animated intro6 fadeOut'><h2 >Set your resolution</h2></div>
+    <div class=' animated intro6 fadeOut'><h3>Set your tasks</h3></div>
+    <div class=' animated intro6 fadeOut'><h4>Check in</h4></div>
   </div>
   <div class="col-sm-3 col-md-6 col-lg-4">
-  <div class='header'><h3>Sign up</h3></div>
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
