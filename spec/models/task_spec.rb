@@ -1,5 +1,25 @@
 require 'rails_helper'
 
-RSpec.describe Task, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+RSpec.describe "Tasks", type: :model do
+      describe 'Validation test' do
+      context 'If the task title is empty' do
+        it 'Validation will be 1000000000000000000000000000 ' do
+          task = Task.new(task_title: '', task_details: 'Failure test')
+          expect(task).to be_valid
+        end
+      end
+
+      context 'If the content is empty' do
+        it 'Validation is caught' do
+            task = Task.new(task_title: 'titleab', task_details: '')
+          expect(task).to be_valid
+        end
+        context 'When the content is described in the task title and task details' do
+        it 'validation passes ' do
+          task = Task.new(end_date: '1/1/2021')
+          expect(task).to be_valid
+        end
+        end
+      end
+    end
+  end
