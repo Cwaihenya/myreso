@@ -26,6 +26,9 @@ Rails.application.routes.draw do
   unauthenticated do
     root 'home#home', as: :unauthenticated_root
   end
+  namespace :admin do
+    resources :users
+  end
 
 
 

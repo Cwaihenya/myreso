@@ -11,7 +11,7 @@
  * It is generally better to create a new file per style scope.
  *= require animate
 
-
+*= require font-awesome
  *= require_tree .
  *= require_self
  */
@@ -28,6 +28,9 @@
      li
      {
          list-style:none;
+     }
+     .animate{
+       font-size: 50px;
      }
 .left
   {
@@ -50,6 +53,7 @@
   absolute: top;
   padding-top: 20px;
 }
+
 .main-header
 {
 
@@ -76,8 +80,14 @@
     border: none
 
 }
+.header
+{float: left;
+margin-top: 0px;
+padding-top: 0;
+margin-left: -75px;}
 
 .text-primary
+
 {
 margin: 30px;
 
@@ -85,10 +95,13 @@ font-size: 40px;
 }
 .intro
 {
+  font-family: ‘Helvetica Neue’, Helvetica;
+  font-weight: 200;
   animation-delay: 1s;
   margin: 20px;
   font-size: 60px;
   padding-top: 40px;
+  animation-iteration-count: 5;
 }
 .intro1
 {
@@ -96,6 +109,7 @@ font-size: 40px;
   color: blue;
   font-size: 60px;
   margin: 20px;
+  animation-iteration-count: 5;
 
 }
 .intro2
@@ -105,6 +119,7 @@ font-size: 40px;
   color: blue;
   font-size: 60px;
   margin: 30px;
+  animation-iteration-count: 5;
 }
 .intro3
 {
@@ -112,6 +127,7 @@ font-size: 40px;
   color: blue;
   font-size: 60px;
   margin: 30px;
+  animation-iteration-count: 5;
 
 }
 
@@ -132,7 +148,12 @@ font-size: 40px;
 {
   width: 100%;
 }
-
+.container
+{
+  padding-top: 80px;
+padding-left: 80px;
+padding-right: 80px;
+}
 
 .footer{
  width: 100%;
