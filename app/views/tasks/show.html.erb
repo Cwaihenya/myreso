@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <p>
   <strong>Task title:</strong>
@@ -15,26 +15,7 @@
   <%= @task.frequency %>
 </p>
 
-<!-- <div class="container text-center">
-  <h1><%= @task.task_title %></h1>
 
-
-
-  <p>You have completed <%= @task.days_completed %> done towards your resolution</p>
-
-<p>You have <%= days_until_end(@resolution) %> days left to achieve your resolution</p>
-
-
-
-  <% if Time.now < @resolution.end_date %>
-    <h3>Did you complete your task today?</h3>
-    <%= form_tag task_path(@tasks) do %>
-      <%= submit_tag "Task Completed Today", :class => "btn btn-info" %>
-    <% end %>
-  <% else %>
-    <h3>You have <%= days_until_end(@resolution) %> days left to achieve your resolution</h3>
-  <% end %>
-</div> -->
 
 
 <%= link_to 'Edit', edit_resolution_task_path(@task) %> |
