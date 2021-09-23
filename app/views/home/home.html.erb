@@ -1,4 +1,7 @@
 <div class="container-fluid">
+  <button class="top-btn guest-btn"><%= link_to "Guest login ", users_guest_sign_in_path, method: :post %></button>
+    <button class="top-btn admin-guest-btn"><%= link_to "Admin login", users_admin_guest_sign_in_path, method: :post %></button>
+
 <div class="row">
 
 
@@ -9,8 +12,6 @@
     <div class= "rounded mx-auto d-block">
       <%= image_tag "home/tree.jpg", :class => "img-fluid w-150"%>
   </div>
-  <button class="top-btn guest-btn"><%= link_to "Guest login ", users_guest_sign_in_path, method: :post %></button>
-    <button class="top-btn admin-guest-btn"><%= link_to "Admin login", users_admin_guest_sign_in_path, method: :post %></button>
 
   </div>
 </div>

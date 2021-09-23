@@ -4,4 +4,7 @@ class Resolution < ApplicationRecord
 has_many :blogs
 belongs_to :user
 validates :title, presence: true
+
+validates :details, presence: true
+validates :end_date, presence: true
 end
