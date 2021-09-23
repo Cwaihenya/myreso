@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   authenticated :user do
     root 'blogs#index', as: :authenticated_root
   end
-  get '/home' => 'users#home'
+
   unauthenticated do
     root 'home#home', as: :unauthenticated_root
   end
